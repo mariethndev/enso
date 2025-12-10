@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="tableContainer"></div>
+
+<script>
+
+const data = [
+    { prenom: "Alice", age: 25, ville: "Paris" },
+    { prenom: "Bob", age: 30, ville: "Lyon" },
+    { prenom: "Emma", age: 22, ville: "Marseille" }
+];
+
+const container = document.getElementById("tableContainer");
+
+const table = document.createElement("table");
+table.border = "1";
+
+// Ligne d'en-tête
+const headerRow = document.createElement("tr");
+
+const th1 = document.createElement("th");
+th1.textContent = "Prénom";
+
+const th2 = document.createElement("th");
+th2.textContent = "Âge";
+
+const th3 = document.createElement("th");
+th3.textContent = "Ville";
+
+headerRow.appendChild(th1);
+headerRow.appendChild(th2);
+headerRow.appendChild(th3);
+
+table.appendChild(headerRow);
+
+// Lignes de données
+data.forEach(person => {
+    const row = document.createElement("tr");
+
+    const tdNom = document.createElement("td");
+    tdNom.textContent = person.prenom;
+
+    const tdAge = document.createElement("td");
+    tdAge.textContent = person.age;
+
+    const tdVille = document.createElement("td");
+    tdVille.textContent = person.ville;
+
+    row.appendChild(tdNom);
+    row.appendChild(tdAge);
+    row.appendChild(tdVille);
+
+    table.appendChild(row);
+});
+
+container.appendChild(table);
+
+</script>
+
+</body>
+</html>
