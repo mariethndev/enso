@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Arène de Combat</h1></header>
+
+    <main>
+      <section class="container">
+        <div class="frame_player_1 frame">
+          <img src="nobody.png" alt="nobody" id="img_player_1" />
+          <div class="frame_info_player">
+            <div id="name_p1"></div>
+            <p>PV / PV MAX</p>
+            <div id="health_p1" class="pv"></div>
+            <p>Attaque</p>
+            <div class="force" id="power_p1"></div>
+            <p>Nb de Potions</p>
+            <div id="potions_p1" class="potions"></div>
+          </div>
+          <div class="action action_p1">
+            <div class="atk" id="atk_p1">Attaquer</div>
+            <div class="potion" id="cure_p1">Soigner</div>
+          </div>
+        </div>
+
+        <div class="frame_info frame">
+          <div class="info_Action"></div>
+          <div class="info_General"></div>
+          <div class="reset">Reset</div>
+        </div>
+
+        <div class="frame_player_2 frame">
+          <img src="nobody.png" alt="nobody" id="img_player_2" />
+          <div class="frame_info_player">
+            <div id="name_p2"></div>
+            <p>PV / PV MAX</p>
+            <div id="health_p2" class="pv"></div>
+            <p>Attaque</p>
+            <div class="force" id="power_p2"></div>
+            <p>Nb de Potions</p>
+            <div id="potions_p2" class="potions"></div>
+          </div>
+          <div class="action action_p2">
+            <div class="atk disabled" id="atk_p2">Attaquer</div>
+            <div class="potion disabled" id="cure_p2">Soigner</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><h3>Projet html/css et Javascript</h3></footer>
+
+<script defer src="app.js"></script>
+  </body>
