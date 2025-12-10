@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(225deg, rgb(0, 0, 0) 0%, rgb(111, 111, 111) 100%);
+  min-height: 100vh;
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  padding: 20px 0;
+  background: linear-gradient(
+    45deg,
+    rgb(0, 233, 247) 0%,
+    rgb(197, 0, 249) 100%
+  );
+}
+
+h1,
+h3 {
+  background: linear-gradient(225deg, rgb(0, 0, 0) 0%, rgb(111, 111, 111) 100%);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+main {
+  flex-grow: 1;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 1300px;
+  /* border : 1px solid red; */
+  margin: 20px auto;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+}
+
+.card-img {
+  width: 182px;
+  height: auto;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.card-img:hover {
+  transform: scale(1.05);
+}
+
+.properties {
+  width: 200px;
+  height: 182px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name-character {
+  text-align: center;
+  text-decoration: underline;
+}
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+  width: 70px;
+  height: 30px;
+}
+
+.buttons button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons :nth-child(1) {
+  background: #01f35e;
+}
+.buttons :nth-child(2) {
+  background: red;
+}
+
+@media screen and (max-width: 440px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card-img {
+    width: 200px;
+  }
+}
+
+
+.testStyle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+  font-size: 32px;
+}
+
+.buttons .disabled {
+  background: #c4c4c4;   
+  pointer-events: none;
+}
+
+.healed {
+  animation: greenShadow 3s ease-in-out;
+}
+
+@keyframes greenShadow {
+
+  15%{
+  
+    border: 1px solid green;
+  }
+
+  50% {
+    box-shadow: 0 0 20px 4px green;
+    border: 1px solid green;
+  } 
+  85%{
+  
+    border: 1px solid green;
+  }
+}
